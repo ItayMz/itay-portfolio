@@ -14,7 +14,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/[0.045] bg-[#090e16]/88 backdrop-blur-xl">
       <nav className="container-shell flex h-[92px] items-center justify-between" aria-label="Primary navigation">
         <Link to="/" className="focus-ring text-sm font-black tracking-[0.18em] text-white transition-colors hover:text-brand-soft">
-          ITAY M.
+          ITAY MAZOR
         </Link>
 
         <div className="hidden items-center gap-10 md:flex">
