@@ -1,3 +1,6 @@
+import { ArrowUpRight } from "lucide-react";
+import { projectLinks } from "@/data/projectLinks";
+
 export function CaseStudyHero() {
   return (
     <section aria-labelledby="ioc-workbench-title" className="container-shell py-16 lg:py-24">
@@ -32,6 +35,18 @@ export function CaseStudyHero() {
           <dd className="mt-1">2026</dd>
         </div>
       </dl>
+      <div className="mt-10">
+        <a
+          href={projectLinks.iocWorkbench.liveDemo}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open IOC Workbench live application in a new tab"
+          className="focus-ring inline-flex min-h-12 items-center gap-2 rounded-xl border border-white/14 bg-white/[0.045] px-5 py-3 text-sm font-semibold text-copy transition duration-200 hover:border-white/20 hover:bg-white/[0.07] hover:text-white"
+        >
+          <span>Open Live Application</span>
+          <ArrowUpRight size={18} aria-hidden="true" />
+        </a>
+      </div>
     </section>
   );
 }

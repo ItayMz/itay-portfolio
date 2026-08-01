@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router";
+import { projectLinks } from "@/data/projectLinks";
 
 const capabilities = ["Multi-format IOC parsing", "Defender KQL generation", "CrowdStrike & QRadar exports", "Validation and normalization"];
 const metadata = ["Production Ready", "React + TypeScript", "FastAPI + Python"];
@@ -32,13 +33,25 @@ export function FeaturedProjectSection() {
             </div>
 
             <div className="mt-auto pt-8">
-              <Link
-                to="/projects/ioc-workbench"
-                className="focus-ring inline-flex min-h-12 items-center gap-2 rounded-xl border border-white/14 bg-white/[0.045] px-5 py-3 text-sm font-semibold text-copy transition duration-200 hover:border-white/20 hover:bg-white/[0.07] hover:text-white"
-              >
-                <span>Read the case study</span>
-                <ArrowUpRight size={18} aria-hidden="true" />
-              </Link>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  to={projectLinks.iocWorkbench.caseStudy}
+                  className="focus-ring inline-flex min-h-12 items-center gap-2 rounded-xl border border-white/14 bg-white/[0.045] px-5 py-3 text-sm font-semibold text-copy transition duration-200 hover:border-white/20 hover:bg-white/[0.07] hover:text-white"
+                >
+                  <span>Read the case study</span>
+                  <ArrowUpRight size={18} aria-hidden="true" />
+                </Link>
+                <a
+                  href={projectLinks.iocWorkbench.liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open IOC Workbench live application in a new tab"
+                  className="focus-ring inline-flex min-h-12 items-center gap-2 rounded-xl border border-white/12 bg-transparent px-5 py-3 text-sm font-semibold text-copy-muted transition duration-200 hover:border-white/18 hover:bg-white/[0.03] hover:text-copy"
+                >
+                  <span>Open IOC Workbench</span>
+                  <ArrowUpRight size={18} aria-hidden="true" />
+                </a>
+              </div>
             </div>
           </div>
 
